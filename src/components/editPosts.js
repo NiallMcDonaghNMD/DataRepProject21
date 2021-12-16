@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 export class EditPosts extends React.Component {
     constructor() {
@@ -30,9 +29,6 @@ export class EditPosts extends React.Component {
                 postEssay: response.data.postEssay,
                 _id: response.data._id
             })
-
-            //this.props.history.push("src\components\posts.js");
-
         })
         .catch();
     }
@@ -79,7 +75,7 @@ export class EditPosts extends React.Component {
     }
     render() {
         return (
-            
+            //Front end - allowing you to edit the variables
             <div>
                 <h1>Edit essay belonging to: {this.state.postName}</h1>
                 <form onSubmit={this.handleSubmit}>

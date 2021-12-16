@@ -5,7 +5,6 @@ import Card from 'react-bootstrap/Card';
 class Homepage extends Component {
     render() {
         return (
-
             <React.Fragment>
                 {/* //Normally due to how the tree structure of React works you can only return one element, 
                 this gives you a root node that allows you to do multiple elements */}
@@ -18,10 +17,10 @@ class Homepage extends Component {
 
                         <Card>
                             <Card.Body>
-                                <Carousel >
+                                <Carousel > {/*Showing images which rotate */}
                                     <Carousel.Item>
                                         <img
-                                            className="d-block w-5 p-1"
+                                            className="d-block w-5 p-1" //Formatting
                                             src="https://images.squarespace-cdn.com/content/v1/589b7c3946c3c43e71916cfd/1562701284947-LFF3JF90VDJ44GDRD46U/Untitled+design+%282%29.jpg?format=1000w"
                                             alt="First slide"
                                         />

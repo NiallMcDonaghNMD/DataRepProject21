@@ -25,7 +25,6 @@ class App extends Component {
               <Nav.Link href="/createPost">Create Post</Nav.Link>
             </Nav>
           </Navbar>
-         
           <br></br>
           <Switch> {/*Allows routing to the individual components like content etc. */}
             <Route path='/' component={Content} exact />

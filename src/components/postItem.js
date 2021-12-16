@@ -8,7 +8,7 @@ export class PostItem extends React.Component {
 
     constructor() {
         super();
-        this.deletePost = this.deletePost.bind(this); //must bind Delete Movie to use lower sections of code.
+        this.deletePost = this.deletePost.bind(this); //must bind Delete Post to use lower sections of code.
     }
 
     deletePost(e) {
@@ -25,12 +25,10 @@ export class PostItem extends React.Component {
         }
     }
 
-
-
     render() {
         return (
             <div class="card">
-        
+                {/* Card allows to display this info neatly */}
                 <Card>
                     <Card.Header as="h5">Author: {this.props.post.postName}</Card.Header>
                     <Card.Body>
@@ -40,7 +38,6 @@ export class PostItem extends React.Component {
                         </Card.Text>
                         <Button variant="danger" className='btn btn-outline-dark' onClick={this.deletePost}>Delete Post</Button>
                         <Link to={"/edit/" + this.props.post._id} className='btn btn-primary'>Edit</Link>  {/*When clicked move to this post */}
-
                     </Card.Body>
                 </Card>
             </div>

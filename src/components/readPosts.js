@@ -11,7 +11,7 @@ export class ReadPosts extends Component {
     componentDidMount() {
         axios.get('http://localhost:4000/api/posts')
             .then((response) => {
-                this.setState({ posts: response.data }) //Got rid of posts aspect as it is looking for DATA not specifically movies
+                this.setState({ posts: response.data }) //Got rid of posts aspect as it is looking for DATA not specifically post
             })
             .catch((error) => { console.log(error) });
     }
@@ -19,7 +19,7 @@ export class ReadPosts extends Component {
     ReloadData() {
         axios.get('http://localhost:4000/api/posts')
             .then((response) => {
-                this.setState({ posts: response.data }) //Got rid of posts aspect as it is looking for DATA not specifically movies
+                this.setState({ posts: response.data }) //Got rid of posts aspect as it is looking for DATA not specifically post
             })
             .catch((error) => { console.log(error) });
     }
@@ -27,12 +27,11 @@ export class ReadPosts extends Component {
         {
             posts: []
         };
-        
+
     render() {
         return (
             <div>
                 <br></br>
-                {/* <h1 align="left">Please search Author name to find post</h1> */}
                 <Posts posts={this.state.posts} ReloadData = {this.ReloadData}></Posts> {/*Pass component/method down */}
             </div>
 
